@@ -22,7 +22,7 @@ export default class RandomPlanet extends Component {
     };
 
     updatePlanet() {
-        const id = Math.floor(Math.random()*25) +2;
+        const id = Math.floor(Math.random()*25 +2);
         this.swapiService
             .getPlanet(id)
             .then(this.onPlanetLoaded);
@@ -31,7 +31,6 @@ export default class RandomPlanet extends Component {
     render() {
 
         const {planet: {id, name, population, rotationPeriod, diameter} }= this.state;
-
         return (
             <div className="random-planet jumbotron rounded">
                 <img className="planet-image"

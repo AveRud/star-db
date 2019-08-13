@@ -33,23 +33,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="random-planet.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/random-planet/random-planet.js">
+      <file leaf-file-name="swapi-service.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/services/swapi-service.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="24" column="50" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="261">
+              <caret line="49" column="30" lean-forward="true" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="swapi-service.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/services/swapi-service.js">
+      <file leaf-file-name="random-planet.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/random-planet/random-planet.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="383">
-              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+            <state relative-caret-position="144">
+              <caret line="28" column="6" lean-forward="true" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -67,6 +64,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>web</find>
+      <find>КОН</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -93,8 +91,8 @@
         <option value="$PROJECT_DIR$/src/components/person-details/person-details.js" />
         <option value="$PROJECT_DIR$/src/components/person-details/person-details.css" />
         <option value="$PROJECT_DIR$/src/components/random-planet/random-planet.css" />
-        <option value="$PROJECT_DIR$/src/services/swapi-service.js" />
         <option value="$PROJECT_DIR$/src/components/random-planet/random-planet.js" />
+        <option value="$PROJECT_DIR$/src/services/swapi-service.js" />
       </list>
     </option>
   </component>
@@ -116,7 +114,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-11" />
-    <option name="width" value="980" />
+    <option name="width" value="1397" />
     <option name="height" value="1044" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -254,7 +252,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1565687402677</updated>
-      <workItem from="1565687404805" duration="16680000" />
+      <workItem from="1565687404805" duration="24098000" />
     </task>
     <task id="LOCAL-00001" summary="implemented client API">
       <created>1565700511454</created>
@@ -277,27 +275,41 @@
       <option name="project" value="LOCAL" />
       <updated>1565704634380</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="implemented random-planet section with; fixed bud in swapi-service">
+      <created>1565709865228</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1565709865228</updated>
+    </task>
+    <task id="LOCAL-00005" summary="refactoring swapi-service and random-planet component">
+      <created>1565714943190</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1565714943190</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16680000" />
+    <option name="totallyTimeSpent" value="24098000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="653" height="696" extended-state="1" />
+    <frame x="-7" y="0" width="931" height="696" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.3457792" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.24675325" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" sideWeight="0.5007949" side_tool="true" weight="0.32888147" />
-      <window_info anchor="bottom" id="Version Control" weight="0.32888147" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32888147" />
+      <window_info anchor="bottom" id="Version Control" weight="0.3282572" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3282572" />
       <window_info id="npm" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" sideWeight="0.49920508" visible="true" weight="0.0" />
+      <window_info anchor="bottom" id="Terminal" sideWeight="0.49920508" weight="0.0" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.33222038" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3316413" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -342,7 +354,15 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="implemented client API" />
     <MESSAGE value="implemented project structure. added components and styles for them" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented project structure. added components and styles for them" />
+    <MESSAGE value="implemented random-planet section with" />
+    <MESSAGE value="implemented random-planet section with; fixed bud in swapi-service" />
+    <MESSAGE value="refactoring swapi-service and random-planet component" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring swapi-service and random-planet component" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/package-lock.json">
@@ -492,20 +512,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/swapi-service.js">
+    <entry file="file://$PROJECT_DIR$/src/components/random-planet/random-planet.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        <state relative-caret-position="144">
+          <caret line="28" column="6" lean-forward="true" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/random-planet/random-planet.js">
+    <entry file="file://$PROJECT_DIR$/src/services/swapi-service.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="24" column="50" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="261">
+          <caret line="49" column="30" lean-forward="true" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
         </state>
       </provider>
     </entry>
