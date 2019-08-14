@@ -4,6 +4,7 @@ import SwapiService from '../../services/swapi-service'
 
 import './random-planet.css';
 import Spinner from '../spinner/spinner'
+import ErrorIndicator from '../error-indicator/error-indicator'
 
 export default class RandomPlanet extends Component {
 
@@ -11,7 +12,8 @@ export default class RandomPlanet extends Component {
 
     state = {
         planet: {},
-        loading: true
+        loading: true,
+        error: false
     };
 
     constructor() {
@@ -19,29 +21,44 @@ export default class RandomPlanet extends Component {
         this.updatePlanet();
     }
 
-    onPlanetLoaded = (planet) => {
+    onPlanetLoaded = planet => {
         this.setState({
             planet,
             loading: false
         });
     };
 
+    onError = () => {
+        this.setState({
+            error: true,
+            loading: false
+        });
+    };
+
     updatePlanet() {
-        const id = Math.floor(Math.random() * 25 + 2);
+        // const id = Math.floor(Math.random() * 25 + 2);
+        const id = 15000;
         this.swapiService
             .getPlanet(id)
-            .then(this.onPlanetLoaded);
+            .then(this.onPlanetLoaded)
+            .catch(this.onError);
     };
+
 
     render() {
 
-        const { planet, loading } = this.state;
+        const {planet, loading, error} = this.state;
 
+        const hasData = !(loading|| error);
+
+        const errorMessage =  error ? <ErrorIndicator/> : null;
         const spinner = loading ? <Spinner/> : null;
-        const content = !loading ? <PlanetView planet={planet}/> : null;
+        const content = hasData ? <PlanetView planet={planet}/> : null;
+
 
         return (
             <div className="random-planet jumbotron rounded">
+                {errorMessage}
                 {spinner}
                 {content}
             </div>
@@ -51,13 +68,13 @@ export default class RandomPlanet extends Component {
 
 const PlanetView = ({planet}) => {
 
-    const { id, name, population, rotationPeriod, diameter} = planet;
-
+    const {id, name, population, rotationPeriod, diameter} = planet;
+console.log(id);
     return (
         <React.Fragment>
             <img className="planet-image"
                  src={`https://starwars-visualguide.com/assets/img/planets/${id}.jpg`}
-            alt='planet'/>
+                 alt='planet'/>
             <div>
                 <h4>{name}</h4>
                 <ul className="list-group list-group-flush">
