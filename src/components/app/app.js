@@ -4,13 +4,15 @@ import Header from '../header/header';
 import RandomPlanet from '../random-planet/random-planet';
 import ItemList from '../item-list/item-list';
 import PersonDetails from '../person-details/person-details';
+import ErrorIndicator from '../error-indicator/error-indicator'
 
 import './app.css';
 
 export default class App extends Component {
 
     state = {
-        selectedPerson: null
+        selectedPerson: null,
+        hasError: false
     };
 
     onPersonSelected = (id) => {
@@ -19,7 +21,19 @@ export default class App extends Component {
         })
     };
 
+    componentDidCatch() {
+        console.log('Error');
+        this.setState({
+            hasError: true
+        })
+    }
+
     render() {
+
+        if(this.state.hasError) {
+            return <ErrorIndicator />
+        }
+
         return (
             <div>
                 <Header/>
