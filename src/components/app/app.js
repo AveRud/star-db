@@ -11,14 +11,15 @@ import './app.css';
 export default class App extends Component {
 
     state = {
-        selectedPerson: null,
+        showRandomPlanet: true,
+        selectedPerson: 5,
         hasError: false
     };
 
     onPersonSelected = (id) => {
         this.setState({
             selectedPerson: id
-        })
+        });
     };
 
     componentDidCatch() {
@@ -30,12 +31,12 @@ export default class App extends Component {
 
     render() {
 
-        if(this.state.hasError) {
-            return <ErrorIndicator />
+        if (this.state.hasError) {
+            return <ErrorIndicator/>
         }
 
         return (
-            <div>
+            <div className='stardb-app'>
                 <Header/>
                 <RandomPlanet/>
 

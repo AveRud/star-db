@@ -52,9 +52,9 @@ export default class RandomPlanet extends Component {
 
         const {planet, loading, error} = this.state;
 
-        const hasData = !(loading|| error);
+        const hasData = !(loading || error);
 
-        const errorMessage =  error ? <ErrorIndicator/> : null;
+        const errorMessage = error ? <ErrorIndicator/> : null;
         const spinner = loading ? <Spinner/> : null;
         const content = hasData ? <PlanetView planet={planet}/> : null;
 
@@ -83,7 +83,7 @@ const PlanetView = ({planet}) => {
                     <li className="list-group-item">
                         <span className="term">Population</span>
                         <span>{population}</span>
-                    </li>
+                     </li>
                     <li className="list-group-item">
                         <span className="term">Rotation Period</span>
                         <span>{rotationPeriod}</span>
