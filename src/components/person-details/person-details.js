@@ -22,7 +22,7 @@ export default class PersonDetails extends Component {
     }
 
     updatePerson() {
-        const {personId} = this.props;
+        const { personId } = this.props;
         if (!personId) {
             return;
         }
@@ -30,7 +30,7 @@ export default class PersonDetails extends Component {
         this.swapiService
             .getPerson(personId)
             .then((person) => {
-                this.setState({person});
+                this.setState({ person });
             });
     }
 
@@ -40,10 +40,7 @@ export default class PersonDetails extends Component {
             return <span>Select a person from a list</span>
         }
 
-        const {
-            person:
-                {id, name, gender, birthYear, eyeColor}
-        } = this.state.person;
+        const {id, name, gender, birthYear, eyeColor} = this.state.person;
 
         return (
             <div className="person-details card">
@@ -52,7 +49,7 @@ export default class PersonDetails extends Component {
                      alt='person'/>
 
                 <div className="card-body">
-                    <h4>{name} {this.props.person.id}</h4>
+                    <h4>{name}</h4>
                     <ul className="list-group list-group-flush">
                         <li className="list-group-item">
                             <span className="term">Gender</span>
