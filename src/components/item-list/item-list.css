@@ -5,3 +5,17 @@
 .item-list .list-group-item:hover {
     background-color: #444;
 }
+
+div {
+    margin-bottom: 25px;
+}
+
+/*.row-mb2:nth-child(2) {*/
+/*display: flex;*/
+/*align-items: center;*/
+/*}*/
+
+.row-mb2 {
+    display: flex;
+    align-items: center;
+}
