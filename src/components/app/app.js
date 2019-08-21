@@ -7,9 +7,10 @@ import ErrorIndicator from '../error-indicator/error-indicator'
 import './app.css';
 import PeoplePage from "../people-page/people-page";
 import ItemList from "../item-list/item-list";
-import PersonDetails from "../person-details/person-details";
+import ItemDetails from "../item-details/item-details";
 import SwapiService from "../../services/swapi-service";
 import ErrorBoundary from "../error-boundary/error-boundary";
+import Row from "../row/row";
 
 export default class App extends Component {
 
@@ -33,6 +34,14 @@ export default class App extends Component {
             return <ErrorIndicator/>
         }
 
+        const personDetails =(
+            <ItemDetails itemId={11} />
+        );
+
+        const starshipDetails =(
+            <ItemDetails itemId={5}/>
+        );
+
         return (
             <ErrorBoundary>
                 <div className='stardb-app'>
@@ -41,6 +50,9 @@ export default class App extends Component {
 
                     <PeoplePage/>
 
+                    {/*<Row*/}
+                        {/*left={personDetails}*/}
+                        {/*rigth={starshipDetails}/>*/}
                 </div>
             </ErrorBoundary>
         );
