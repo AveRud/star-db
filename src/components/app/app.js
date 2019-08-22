@@ -3,7 +3,6 @@ import React, {Component} from 'react';
 import Header from '../header/header';
 import RandomPlanet from '../random-planet/random-planet';
 import ErrorIndicator from '../error-indicator/error-indicator'
-
 import './app.css';
 import PeoplePage from "../people-page/people-page";
 import ItemList from "../item-list/item-list";
@@ -34,25 +33,39 @@ export default class App extends Component {
             return <ErrorIndicator/>
         }
 
-        const personDetails =(
-            <ItemDetails itemId={11} />
+        const {
+            getPerson,
+            getStarship,
+            getPersonImage,
+            getPlanetImage,
+            getStarshipImage
+        } = this.swapiService;
+
+        const personDetails = (
+            <ItemDetails
+                itemId={11}
+                getData={getPerson}
+                getImageUrl={getPersonImage}/>
         );
 
-        const starshipDetails =(
-            <ItemDetails itemId={5}/>
+        const starshipDetails = (
+            <ItemDetails
+                itemId={10}
+                getData={getStarship}
+                getImageUrl={getStarshipImage}/>
         );
 
         return (
             <ErrorBoundary>
                 <div className='stardb-app'>
                     <Header/>
-                    <RandomPlanet/>
+                    {/*<RandomPlanet/>*/}
 
-                    <PeoplePage/>
+                    {/*<PeoplePage/>*/}
 
-                    {/*<Row*/}
-                        {/*left={personDetails}*/}
-                        {/*rigth={starshipDetails}/>*/}
+                    <Row
+                        left={personDetails}
+                        right={starshipDetails}/>
                 </div>
             </ErrorBoundary>
         );
