@@ -3,6 +3,17 @@ import React, {Component} from 'react';
 import './item-details.css';
 import SwapiService from "../../services/swapi-service";
 
+const Record = ({item, field, label }) => {
+    return (
+        <li className="list-group-item">
+            <span className="term">{label}</span>
+            <span>{item[field]}</span>
+        </li>
+    )
+};
+
+export {Record};
+
 export default class ItemDetails extends Component {
 
     swapiService = new SwapiService();

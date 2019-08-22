@@ -1,12 +1,9 @@
 import React, {Component} from 'react';
 
 import Header from '../header/header';
-import RandomPlanet from '../random-planet/random-planet';
 import ErrorIndicator from '../error-indicator/error-indicator'
 import './app.css';
-import PeoplePage from "../people-page/people-page";
-import ItemList from "../item-list/item-list";
-import ItemDetails from "../item-details/item-details";
+import ItemDetails, {Record} from "../item-details/item-details";
 import SwapiService from "../../services/swapi-service";
 import ErrorBoundary from "../error-boundary/error-boundary";
 import Row from "../row/row";
@@ -52,7 +49,12 @@ export default class App extends Component {
             <ItemDetails
                 itemId={10}
                 getData={getStarship}
-                getImageUrl={getStarshipImage}/>
+                getImageUrl={getStarshipImage}>
+
+            <Record field="gender" label="Gender"/>
+            <Record field="eyeColor" label="Eye Color"/>
+
+            </ItemDetails>
         );
 
         return (
