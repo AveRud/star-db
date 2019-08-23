@@ -20,7 +20,3 @@ export {
     PlanetList,
     StarshipList
 }
-
-// const {getAllPeople} = new SwapiService();
-//
-// export default withData(ItemList, getAllPeople)
