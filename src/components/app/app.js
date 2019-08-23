@@ -8,6 +8,15 @@ import SwapiService from "../../services/swapi-service";
 import ErrorBoundary from "../error-boundary/error-boundary";
 import Row from "../row/row";
 
+import {
+    PersonList,
+    PlanetList,
+    StarshipList,
+    PersonDetails,
+    PlanetDetails,
+    StarshipDetails
+} from '../sw-components';
+
 export default class App extends Component {
 
     swapiService = new SwapiService();
@@ -71,10 +80,21 @@ export default class App extends Component {
                     {/*<RandomPlanet/>*/}
 
                     {/*<PeoplePage/>*/}
+                    <PersonList>
+                        {({name}) => <span>{name}</span>}
+                    </PersonList>
 
-                    <Row
-                        left={personDetails}
-                        right={starshipDetails}/>
+                    <StarshipList>
+                        {({name}) => <span>{name}</span>}
+                    </StarshipList>
+
+                    <PlanetList>
+                        {({name}) => <span>{name}</span>}
+                    </PlanetList>
+
+                    {/*<Row*/}
+                        {/*left={personDetails}*/}
+                        {/*right={starshipDetails}/>*/}
                 </div>
             </ErrorBoundary>
         );
